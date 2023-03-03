@@ -1,5 +1,5 @@
 pipeline{
-      agents { label '' }
+      agents { label 'SPRING-PET' }
       stages {
           stage('vcs') {
             steps {
