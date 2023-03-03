@@ -1,5 +1,5 @@
-pipeline{
-      agents { label 'SPRING-PET' }
+pipeline {
+      agent { label 'SPRING-PET' }
       stages {
           stage('vcs') {
             steps {
