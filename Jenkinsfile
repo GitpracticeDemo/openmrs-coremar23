@@ -14,7 +14,7 @@ pipeline {
           }
           stage('post build') {
             steps {
-                archiveArtifacts artifacts: '**/*.txt',
+                archiveArtifacts artifacts: '**/*.jar',
                                  allowEmptyArchive: true,
                                  onlyIfSuccessful: true,
                                  fingerprint: true
