@@ -9,12 +9,12 @@ pipeline {
           }  
           stage('package') {
             steps {
-                    sh 'export "PATH=/usr/lib/jvm/java-1.8.0-openjdk-amd64:$PATH" && mvn package'     
+                    sh 'export "PATH=/usr/lib/jvm/java-1.8.0-openjdk-amd64:$PATH" && mvn clean package'     
             }
           }
           stage('build') {
             steps {
-                  archiveArtifacts artifacts: '**/*.txt',
+                  archiveArtifacts artifacts: '**/*.jar',
                                    allowEmptyArchive: true,
                                    fingerprint: true,
                                    onlyIfSuccessful: true
