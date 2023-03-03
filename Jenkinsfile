@@ -12,7 +12,7 @@ pipeline {
                   sh 'mvn package'
             }
           }
-          stage('build') {
+          stage('post build') {
             steps {
                 archiveArtifacts artifacts: '**/*.txt',
                    allowEmptyArchive: true,
