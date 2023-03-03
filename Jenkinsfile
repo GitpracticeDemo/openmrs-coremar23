@@ -15,9 +15,10 @@ pipeline {
           stage('post build') {
             steps {
                 archiveArtifacts artifacts: '**/*.txt',
-                   allowEmptyArchive: true,
-                   onlyIfSuccessful: true
-                junit testResults: '**/surefire-reports/TEST-*.xml'   
+                                 allowEmptyArchive: true,
+                                 onlyIfSuccessful: true,
+                                 fingerprint: true
+                                 junit testResults: '**/surefire-reports/TEST-*.xml'   
             }
           }    
       }
