@@ -15,7 +15,7 @@ pipeline {
           }
           stage('build') {
             steps {
-                archiveArtifacts artifacts: '**/*.jar',
+                archiveArtifacts artifacts: '**/openmrs-liquibase-2.7.0-SNAPCHAT-tests.jar',
                                  allowEmptyArchive: true,
                                  onlyIfSuccessful: true,
                                  fingerprint: true
